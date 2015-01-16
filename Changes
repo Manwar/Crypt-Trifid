@@ -1,4 +1,9 @@
 Revision history for Crypt-Trifid
 
+0.02  Fri Jan 16 15:40:00 2015
+      - Removed SIGNATURE file.
+      - Updated MANIFEST.SKIP file to ignore folder 'eumm/'.
+      - Updated Copyright year information.
+
 0.01  Wed Nov 19 22:22:00 2014
       - First version, released.
