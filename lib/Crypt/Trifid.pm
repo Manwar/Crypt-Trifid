@@ -1,6 +1,7 @@
 package Crypt::Trifid;
 
-$Crypt::Trifid::VERSION = '0.02';
+$Crypt::Trifid::VERSION   = '0.03';
+$Crypt::Trifid::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ Crypt::Trifid - Interface to the Trifid cipher.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
@@ -53,7 +54,7 @@ Source: L<Wikipedia|http://en.wikipedia.org/wiki/Trifid_cipher>
 
 =head1 METHODS
 
-=head2 encode()
+=head2 encode($plain_message)
 
 It takes message as scalar string and returns the encoded message.
 
@@ -91,7 +92,7 @@ sub encode {
     return $encoded;
 }
 
-=head2 decode()
+=head2 decode($encoded_message)
 
 It takes an encoded message as scalar string and returns the decoded message.
 

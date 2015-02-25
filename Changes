@@ -1,5 +1,8 @@
 Revision history for Crypt-Trifid
 
+0.03  Wed Feb 25 15:50:00 2015
+      - Updated description for method encode() and method decode() in the pod document.
+
 0.02  Fri Jan 16 15:40:00 2015
       - Removed SIGNATURE file.
       - Updated MANIFEST.SKIP file to ignore folder 'eumm/'.
