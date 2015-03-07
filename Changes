@@ -1,5 +1,9 @@
 Revision history for Crypt-Trifid
 
+0.04  Sat Mar 07 08:45:00 2015
+      - Moved out helper methods to new package Crypt::Trifid::Utils.
+      - Tidied up pod document in general.
+
 0.03  Wed Feb 25 15:50:00 2015
       - Updated description for method encode() and method decode() in the pod document.
 

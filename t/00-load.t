@@ -1,4 +1,10 @@
 #!perl
 
-use Test::More tests => 1;
-BEGIN { use_ok('Crypt::Trifid') || print "Bail out!"; }
+use 5.006;
+use strict; use warnings;
+use Test::More tests => 2;
+
+BEGIN {
+    use_ok('Crypt::Trifid')        || print "Bail out!";
+    use_ok('Crypt::Trifid::Utils') || print "Bail out!";
+}

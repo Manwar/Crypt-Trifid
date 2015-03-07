@@ -1,6 +1,6 @@
 package Crypt::Trifid;
 
-$Crypt::Trifid::VERSION   = '0.03';
+$Crypt::Trifid::VERSION   = '0.04';
 $Crypt::Trifid::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,17 +9,18 @@ Crypt::Trifid - Interface to the Trifid cipher.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
 use 5.006;
 use Data::Dumper;
+use Crypt::Trifid::Utils qw(generate_chart);
 
 use Moo;
 use namespace::clean;
 
-has 'chart' => (is => 'ro', default => sub { _generate_chart(); });
+has 'chart' => (is => 'ro', default => sub { generate_chart(); });
 
 =head1 DESCRIPTION
 
@@ -54,7 +55,7 @@ Source: L<Wikipedia|http://en.wikipedia.org/wiki/Trifid_cipher>
 
 =head1 METHODS
 
-=head2 encode($plain_message)
+=head2 encode($message)
 
 It takes message as scalar string and returns the encoded message.
 
@@ -181,49 +182,6 @@ sub _decode {
 
     return @nodes;
 }
-
-sub _generate_chart {
-
-    my $chars = _generate_charset();
-    my $chart = {};
-    foreach my $i (0..2) {
-        foreach my $j (0..2) {
-            foreach my $k (0..2) {
-                $chart->{$chars->[$i]->[$j]->[$k]} = sprintf("%d%d%d", $i+1, $j+1, $k+1);
-            }
-        }
-    }
-
-    return $chart;
-}
-
-sub _generate_charset {
-
-    my @chars = ('A' .. 'Z', ' ');
-    my $chars = [];
-    my $seen  = {};
-    foreach my $i (0..2) {
-        foreach my $j (0..2) {
-            foreach my $k (0..2) {
-                my $char = '';
-                while ($char eq '') {
-                    $char = _get_char(@chars);
-                    if (exists $seen->{$char}) {
-                        $char = '';
-                    }
-                    else {
-                        $seen->{$char} = 1;
-                    }
-                }
-                $chars->[$i]->[$j]->[$k] = $char;
-            }
-        }
-    }
-
-    return $chars;
-}
-
-sub _get_char { my (@chars) = @_; return $chars[ rand @chars ]; }
 
 =head1 AUTHOR
 

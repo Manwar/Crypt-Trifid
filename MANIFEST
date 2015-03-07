@@ -4,6 +4,7 @@ MANIFEST.SKIP
 Makefile.PL
 README
 lib/Crypt/Trifid.pm
+lib/Crypt/Trifid/Utils.pm
 t/00-load.t
 t/01-new.t
 t/02-encode.t
