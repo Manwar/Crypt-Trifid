@@ -1,6 +1,6 @@
 package Crypt::Trifid::Utils;
 
-$Crypt::Trifid::Utils::VERSION   = '0.04';
+$Crypt::Trifid::Utils::VERSION   = '0.05';
 $Crypt::Trifid::Utils::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ Crypt::Trifid::Utils - Helper package for Crypt::Trifid.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
@@ -31,7 +31,7 @@ B<FOR INTERNAL USE ONLY>
 
 sub generate_chart {
 
-    my $chars = generate_charset();
+    my $chars = _generate_charset();
     my $chart = {};
     foreach my $i (0..2) {
         foreach my $j (0..2) {
@@ -48,7 +48,7 @@ sub generate_chart {
 #
 # PRIVATE METHODS
 
-sub generate_charset {
+sub _generate_charset {
 
     my @chars = ('A' .. 'Z', ' ');
     my $chars = [];

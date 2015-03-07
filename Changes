@@ -1,5 +1,8 @@
 Revision history for Crypt-Trifid
 
+0.05  Sat Mar 07 09:00:00 2015
+      - Renamed method generate_charset() to _generate_charset(), just to mark as private.
+
 0.04  Sat Mar 07 08:45:00 2015
       - Moved out helper methods to new package Crypt::Trifid::Utils.
       - Tidied up pod document in general.
