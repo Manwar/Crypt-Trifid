@@ -1,6 +1,6 @@
 package Crypt::Trifid;
 
-$Crypt::Trifid::VERSION   = '0.05';
+$Crypt::Trifid::VERSION   = '0.06';
 $Crypt::Trifid::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ Crypt::Trifid - Interface to the Trifid cipher.
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
@@ -189,7 +189,7 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 
 =head1 REPOSITORY
 
-L<https://github.com/Manwar/Crypt-Trifid>
+L<https://github.com/manwar/Crypt-Trifid>
 
 =head1 BUGS
 
