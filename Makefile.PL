@@ -19,18 +19,22 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        'Moo'              => 0,
-        'namespace::clean' => 0,
+        'Moo'              => '2.000000',
+        'namespace::clean' => '0.24',
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Crypt-Trifid-*' },
     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
         'meta-spec' => { version => 2 },
+        provides    => {
+            'Crypt::Trifid'        => { file => 'lib/Crypt/Trifid.pm'      , version => '0.07' },
+            'Crypt::Trifid::Utils' => { file => 'lib/Crypt/Trifid/Utils.pm', version => '0.07' },
+        },
         resources => {
             repository => {
                 type => 'git',
-                url  => 'https://github.com/Manwar/Crypt-Trifid.git',
-                web  => 'https://github.com/Manwar/Crypt-Trifid',
+                url  => 'https://github.com/manwar/Crypt-Trifid.git',
+                web  => 'https://github.com/manwar/Crypt-Trifid',
             },
         }})
      : ()

@@ -12,3 +12,5 @@ t/02-encode.t
 t/03-decode.t
 t/manifest.t
 t/pod.t
+t/meta-json.t
+t/meta-yml.t

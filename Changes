@@ -1,5 +1,10 @@
 Revision history for Crypt-Trifid
 
+0.07  Thu Mar 31 15:50:00 2016
+      - Added unit test scripts (t/meta-json.t and t/meta-yml.t)
+      - Added key 'provides' to the Makefile.PL script.
+      - Updated copyright year information.
+
 0.06  Thu Jan 07 12:05:00 2016
       - Added LICENSE file.
 
